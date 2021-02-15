@@ -31,6 +31,9 @@ en:
     github_integration:
       work_packages:
         tab_name: "GitHub"
+      create_pr:
+        button_label: Create Pull Request
+        button_description: Create new Pull Request on GitHub
       pull_request_opened_comment: >
         **PR Opened:** Pull request %{pr_number} [%{pr_title}](%{pr_url}) for [%{repository}](%{repository_url})
         has been opened by [%{github_user}](%{github_user_url}).

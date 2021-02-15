@@ -30,7 +30,7 @@ import {Component, Input, OnInit} from "@angular/core";
 import {WorkPackageResource} from "core-app/modules/hal/resources/work-package-resource";
 import {PathHelperService} from "core-app/modules/common/path-helper/path-helper.service";
 import {I18nService} from "core-app/modules/common/i18n/i18n.service";
-import {TabComponent} from '../../../../../components/wp-single-view-tabs/tab/tab.component';
+import {TabComponent} from 'core-components/wp-single-view-tabs/tab/tab.component';
 
 
 @Component({
@@ -40,13 +40,16 @@ import {TabComponent} from '../../../../../components/wp-single-view-tabs/tab/ta
 export class GitHubTabComponent implements OnInit, TabComponent {
   @Input() public workPackage:WorkPackageResource;
 
+  public pullRequests = []; // TODO: typespec
+
   constructor(readonly PathHelper:PathHelperService,
               readonly I18n:I18nService) {
   }
 
 
   ngOnInit() {
-    // debugger; // when triggered we know we can render ANYTHING here
+    // TODO fetch real PRs
+    this.pullRequests = [];
   }
 }
 

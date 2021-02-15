@@ -1,4 +1,4 @@
-// -- copyright
+//-- copyright
 // OpenProject is an open source project management software.
 // Copyright (C) 2012-2021 the OpenProject GmbH
 //
@@ -15,6 +15,7 @@
 // of the License, or (at your option) any later version.
 //
 // This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
@@ -23,47 +24,27 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 //
 // See docs/COPYRIGHT.rdoc for more details.
+//++
 
-import {Injector, NgModule} from '@angular/core';
-import { HookService } from '../../hook-service';
-import {Tab} from "../../../../components/wp-single-view-tabs/tab/tab";
-import {WorkPackageResource} from "../../../hal/resources/work-package-resource";
-
-import {GitHubTabComponent} from './github-tab/github-tab.component';
-import {TabHeaderComponent} from './tab-header/tab-header.component';
-import {TabPrsComponent} from './tab-prs/tab-prs.component';
-
-function displayable(work_package: WorkPackageResource): boolean {
-  return(!!work_package.github);
-}
-
-export function initializeGithubIntegrationPlugin(injector:Injector) {
-  const hooks = injector.get<HookService>(HookService);
-  hooks.registerWorkPackageTab(
-    new Tab(
-      GitHubTabComponent,
-      I18n.t('js.github_integration.work_packages.tab_name'),
-      "github",
-      displayable
-    )
-  );
-}
+import {Component, Input, OnInit} from "@angular/core";
+import {WorkPackageResource} from "core-app/modules/hal/resources/work-package-resource";
+import {PathHelperService} from "core-app/modules/common/path-helper/path-helper.service";
+import {I18nService} from "core-app/modules/common/i18n/i18n.service";
 
 
-@NgModule({
-  providers: [
-  ],
-  declarations: [
-    GitHubTabComponent,
-    TabHeaderComponent,
-    TabPrsComponent
-  ]
+@Component({
+  selector: 'tab-header',
+  templateUrl: './tab-header.template.html'
 })
-export class PluginModule {
-  constructor(injector:Injector) {
-    initializeGithubIntegrationPlugin(injector);
+export class TabHeaderComponent implements OnInit {
+  @Input() public workPackage:WorkPackageResource;
+
+  constructor(readonly PathHelper:PathHelperService,
+              readonly I18n:I18nService) {
+  }
+
+  ngOnInit() {
+    // TODO init texts?!
   }
 }
-
-
 
