@@ -534,6 +534,7 @@ ko:
         invalid_url: '은(는) 올바른 URL이 아닙니다.'
         invalid_url_scheme: '은(는) 지원되는 프로토콜(허용: %{allowed_schemes})이 아닙니다.'
         less_than_or_equal_to: "은(는) %{count} 보다 작거나 같아야 합니다"
+        not_deletable: "cannot be deleted."
         not_current_user: "은(는) 현재 유효한 사용자가 아닙니다."
         not_a_date: "은(는) 유효한 날짜가 아닙니다."
         not_a_datetime: "은(는) 유효한 날짜가 아닙니다."
@@ -716,6 +717,7 @@ ko:
       status: "작업 패키지 상태"
       member: "멤버"
       news: "뉴스"
+      placeholder_user: "Placeholder user"
       project: "프로젝트"
       query: "사용자 지정 쿼리"
       role:
@@ -1472,6 +1474,7 @@ ko:
   label_my_account_data: "내 계정 데이터"
   label_my_projects: "내 프로젝트"
   label_my_queries: "내 사용자 지정 쿼리"
+  label_name: "이름"
   label_never: "사용 안 함"
   label_new: "새로 만들기"
   label_new_features: "새로운 기능"
@@ -1521,6 +1524,9 @@ ko:
   label_permissions: "권한"
   label_permissions_report: "권한 보고서"
   label_personalize_page: "이 페이지 개인 설정"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "계획"
   label_please_login: "로그인하세요."
   label_plugins: "플러그인"
@@ -2205,7 +2211,6 @@ ko:
   setting_welcome_text: "환영 블록 텍스트"
   setting_welcome_title: "환영 블록 제목"
   setting_welcome_on_homescreen: "홈 화면에 환영 블록 표시"
-  setting_work_package_group_assignment: "그룹에 할당 허용"
   setting_work_package_list_default_highlighting_mode: "기본 강조 표시 모드"
   setting_work_package_list_default_highlighted_attributes: "기본 인라인 강조 표시 특성"
   settings:

@@ -530,6 +530,7 @@ zh-CN:
         invalid_url: '不是有效的 URL。'
         invalid_url_scheme: '不是受支持的协议（允许：%{allowed_schemes}）。'
         less_than_or_equal_to: "必须小于或等于 %{count}。"
+        not_deletable: "cannot be deleted."
         not_current_user: "不是当前用户。"
         not_a_date: "不是有效的日期。"
         not_a_datetime: "不是有效的日期时间。"
@@ -712,6 +713,7 @@ zh-CN:
       status: "工作包状态"
       member: "成员"
       news: "新闻"
+      placeholder_user: "Placeholder user"
       project: "项目"
       query: "自定义查询"
       role:
@@ -1468,6 +1470,7 @@ zh-CN:
   label_my_account_data: "我的账户数据"
   label_my_projects: "我的项目"
   label_my_queries: "我的自定义查询"
+  label_name: "名称"
   label_never: "永不"
   label_new: "新增"
   label_new_features: "新功能"
@@ -1517,6 +1520,9 @@ zh-CN:
   label_permissions: "权限"
   label_permissions_report: "权限报告"
   label_personalize_page: "对此页面进行个性化设置"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "规划"
   label_please_login: "请登录"
   label_plugins: "插件"
@@ -2199,7 +2205,6 @@ zh-CN:
   setting_welcome_text: "欢迎块文本"
   setting_welcome_title: "欢迎区块标题"
   setting_welcome_on_homescreen: "在主屏幕上显示欢迎信息"
-  setting_work_package_group_assignment: "允许分配到组"
   setting_work_package_list_default_highlighting_mode: "默认突出显示模式"
   setting_work_package_list_default_highlighted_attributes: "默认内联突出显示属性"
   settings:

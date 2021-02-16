@@ -536,6 +536,7 @@
         invalid_url: 'is not a valid URL.'
         invalid_url_scheme: 'is not a supported protocol (allowed: %{allowed_schemes}).'
         less_than_or_equal_to: "must be less than or equal to %{count}."
+        not_deletable: "cannot be deleted."
         not_current_user: "is not the current user."
         not_a_date: "is not a valid date."
         not_a_datetime: "is not a valid date time."
@@ -598,7 +599,7 @@
             project:
               error_not_found: "not found"
             public:
-              error_unauthorized: "- The user has no permission to create public views."
+              error_unauthorized: "- Brukeren har ikke tillatelse til å opprette offentlige visninger."
             group_by:
               invalid: "Kan ikke gruppere av: %{value}"
               format: "%{message}"
@@ -720,6 +721,7 @@
       status: "Status for arbeidspakke"
       member: "Medlem"
       news: "Nyheter"
+      placeholder_user: "Placeholder user"
       project: "Prosjekt"
       query: "Egendefinert spørring"
       role:
@@ -1240,7 +1242,7 @@
   label_all: "alle"
   label_all_time: "alle tidspunkt"
   label_all_words: "Alle ord"
-  label_all_open_wps: "All open"
+  label_all_open_wps: "Alle åpne"
   label_always_visible: "Vises alltid"
   label_announcement: "Kunngjøring"
   label_api_access_key: "API adgangsnøkkel"
@@ -1489,6 +1491,7 @@
   label_my_account_data: "Min kontoinformasjon"
   label_my_projects: "Mine prosjekter"
   label_my_queries: "Minne egendefinerte spørringer"
+  label_name: "Navn"
   label_never: "Aldri"
   label_new: "Ny"
   label_new_features: "New features"
@@ -1538,6 +1541,9 @@
   label_permissions: "Tilganger"
   label_permissions_report: "Tilgangsrapport"
   label_personalize_page: "Tilpass denne siden"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Planlegging"
   label_please_login: "Vennligst logg på"
   label_plugins: "Programtillegg"
@@ -1947,7 +1953,7 @@
   permission_manage_members: "Administrere medlemmer"
   permission_manage_news: "Administrere nyheter"
   permission_manage_project_activities: "Administrere prosjektaktiviteter"
-  permission_manage_public_queries: "Manage public views"
+  permission_manage_public_queries: "Administrer offentlige visninger"
   permission_manage_repository: "Administrere pakkebrønner"
   permission_manage_subtasks: "Manage work package hierarchies"
   permission_manage_versions: "Administrere versjoner"
@@ -2229,7 +2235,6 @@
   setting_welcome_text: "Welcome block text"
   setting_welcome_title: "Welcome block title"
   setting_welcome_on_homescreen: "Display welcome block on homescreen"
-  setting_work_package_group_assignment: "Tillat tildeling til grupper"
   setting_work_package_list_default_highlighting_mode: "Default highlighting mode"
   setting_work_package_list_default_highlighted_attributes: "Default inline highlighted attributes"
   settings:

@@ -31,26 +31,26 @@ require 'spec_helper'
 describe 'Wysiwyg code block macro',
          type: :feature,
          js: true do
-  using_shared_fixtures :admin
+  shared_let(:admin) { FactoryBot.create :admin }
   let(:user) { admin }
   let(:project) { FactoryBot.create(:project, enabled_module_names: %w[wiki]) }
   let(:editor) { ::Components::WysiwygEditor.new }
 
-  let(:snippet) {
+  let(:snippet) do
     <<~RUBY
       def foobar
         'some ruby code'
       end
     RUBY
-  }
+  end
 
-  let(:expected) {
+  let(:expected) do
     <<~EXPECTED
       ```ruby
       #{snippet.strip}
       ```
     EXPECTED
-  }
+  end
 
   before do
     login_as(user)
@@ -83,8 +83,10 @@ describe 'Wysiwyg code block macro',
           expect(page).to have_selector('pre.highlight-ruby', count: 2)
         end
 
+        SeleniumHubWaiter.wait
         # Edit page again, expect widget
         click_on 'Edit'
+        # SeleniumHubWaiter.wait
 
         editor.in_editor do |container,|
           expect(container).to have_selector('.op-uc-code-block', text: snippet, count: 2)
@@ -111,6 +113,7 @@ describe 'Wysiwyg code block macro',
           wp = WikiPage.last
           expect(wp.content.text.gsub("\r\n", "\n")).to eq("```text\nasdf\n```")
 
+          SeleniumHubWaiter.wait
           click_on 'Edit'
 
           editor.in_editor do |container,|
@@ -164,6 +167,7 @@ describe 'Wysiwyg code block macro',
         end
 
         # Edit page again, expect widget
+        SeleniumHubWaiter.wait
         click_on 'Edit'
 
         editor.in_editor do |container,|

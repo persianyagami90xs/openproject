@@ -533,6 +533,7 @@ lt:
         invalid_url: 'nėra tinkamas URL.'
         invalid_url_scheme: 'nėra palaikomos protokolas (leidžiamas: %{allowed_schemes}).'
         less_than_or_equal_to: "turi būti mažesnis arba lygus %{count}."
+        not_deletable: "negali būti pašalintas."
         not_current_user: "nėra dabartinis vartotojas"
         not_a_date: "nėra tinkama data."
         not_a_datetime: "nėra tinkama data ir laikas."
@@ -721,6 +722,7 @@ lt:
       status: "Darbų paketo būsena"
       member: "Narys"
       news: "Naujienos"
+      placeholder_user: "Placeholder user"
       project: "Projektas"
       query: "Vartotojo užklausa"
       role:
@@ -1516,6 +1518,7 @@ lt:
   label_my_account_data: "Mano paskyros duomenys"
   label_my_projects: "Mano projektai"
   label_my_queries: "Mano sukurtos užklausos"
+  label_name: "Vardas"
   label_never: "Niekada"
   label_new: "Naujas"
   label_new_features: "Naujos savybės"
@@ -1565,6 +1568,9 @@ lt:
   label_permissions: "Leidimai"
   label_permissions_report: "Leidimų ataskaita"
   label_personalize_page: "Suasmeninti šį puslapį"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Planavimas"
   label_please_login: "Prašome prisijungti"
   label_plugins: "Papildiniai"
@@ -2264,7 +2270,6 @@ lt:
   setting_welcome_text: "Pasisveikinimo bloko tekstas"
   setting_welcome_title: "Pasisveikinimo bloko pavadinimas"
   setting_welcome_on_homescreen: "Rodyti pasisveikinimo bloką namų lange"
-  setting_work_package_group_assignment: "Leisti priskyrimus grupėms"
   setting_work_package_list_default_highlighting_mode: "Numatytasis paryškinimo būdas"
   setting_work_package_list_default_highlighted_attributes: "Atributai, kuriuos numatyta paryškinti"
   settings:

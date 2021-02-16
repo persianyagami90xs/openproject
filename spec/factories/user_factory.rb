@@ -38,15 +38,15 @@ FactoryBot.define do
     mail_notification { OpenProject::VERSION::MAJOR > 0 ? 'all' : true }
 
     language { 'en' }
-    status { User::STATUSES[:active] }
+    status { User.statuses[:active] }
     admin { false }
     first_login { false if User.table_exists? and User.columns.map(&:name).include? 'first_login' }
 
     factory :admin do
       firstname { 'OpenProject' }
-      sequence(:lastname) do |n| "Admin#{n}" end
-      sequence(:login) do |n| "admin#{n}" end
-      sequence(:mail) do |n| "admin#{n}@example.com" end
+      sequence(:lastname) { |n| "Admin#{n}" }
+      sequence(:login) { |n| "admin#{n}" }
+      sequence(:mail) { |n| "admin#{n}@example.com" }
       admin { true }
       first_login { false if User.table_exists? and User.columns.map(&:name).include? 'first_login' }
     end
@@ -56,15 +56,15 @@ FactoryBot.define do
     factory :locked_user do
       firstname { 'Locked' }
       lastname { 'User' }
-      sequence(:login) do |n| "bob#{n}" end
-      sequence(:mail) do |n| "bob#{n}.bobbit@bob.com" end
+      sequence(:login) { |n| "bob#{n}" }
+      sequence(:mail) { |n| "bob#{n}.bobbit@bob.com" }
       password { 'adminADMIN!' }
       password_confirmation { 'adminADMIN!' }
-      status { User::STATUSES[:locked] }
+      status { User.statuses[:locked] }
     end
 
     factory :invited_user do
-      status { User::STATUSES[:invited] }
+      status { User.statuses[:invited] }
     end
   end
 

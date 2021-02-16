@@ -536,6 +536,7 @@ tr:
         invalid_url: 'geçerli bir adres değil.'
         invalid_url_scheme: 'bu protokol desteklenmiyor (izin: %{allowed_schemes}).'
         less_than_or_equal_to: "%{count} 'ten küçük veya bu değere eşit olmalıdır."
+        not_deletable: "kaldırılamadı."
         not_current_user: "mevcut kullanıcı değil."
         not_a_date: "geçerli bir tarih değil."
         not_a_datetime: "geçerli bir zaman değil."
@@ -720,6 +721,7 @@ tr:
       status: "İş paketi durumu"
       member: "Üye"
       news: "Haberler"
+      placeholder_user: "Placeholder user"
       project: "Proje"
       query: "Özel sorgu"
       role:
@@ -1489,6 +1491,7 @@ tr:
   label_my_account_data: "Hesap verilerim"
   label_my_projects: "Projelerim"
   label_my_queries: "Özel sorgularım"
+  label_name: "İsim"
   label_never: "Hiçbir zaman"
   label_new: "Yeni"
   label_new_features: "Yeni özellikler"
@@ -1538,6 +1541,9 @@ tr:
   label_permissions: "İzinler"
   label_permissions_report: "İzin raporu"
   label_personalize_page: "Bu sayfayı kişiselleştir"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Planlanıyor"
   label_please_login: "Lütfen giriş yapın"
   label_plugins: "Eklentiler"
@@ -2229,7 +2235,6 @@ tr:
   setting_welcome_text: "Hoş geldiniz blok metini"
   setting_welcome_title: "Hoş geldiniz blok başlığı"
   setting_welcome_on_homescreen: "Hoşgeldiniz bloğunu ana ekranda göster"
-  setting_work_package_group_assignment: "Gruplara iş atanmasına izin ver"
   setting_work_package_list_default_highlighting_mode: "Varsayılan vurgulama modu"
   setting_work_package_list_default_highlighted_attributes: "Varsayılan satır içi vurgulanan özellikler"
   settings:

@@ -536,6 +536,7 @@ da:
         invalid_url: 'is not a valid URL.'
         invalid_url_scheme: 'is not a supported protocol (allowed: %{allowed_schemes}).'
         less_than_or_equal_to: "skal være mindre end eller lig med %{count}."
+        not_deletable: "cannot be deleted."
         not_current_user: "is not the current user."
         not_a_date: "is not a valid date."
         not_a_datetime: "is not a valid date time."
@@ -720,6 +721,7 @@ da:
       status: "Status for arbejdspakke"
       member: "Medlem"
       news: "Nyheder"
+      placeholder_user: "Placeholder user"
       project: "Prjoekt"
       query: "Selvvalgt forespørgsel"
       role:
@@ -1489,6 +1491,7 @@ da:
   label_my_account_data: "Mine kontodata"
   label_my_projects: "Mine projekter"
   label_my_queries: "Mine selvvalgte forespørgsler"
+  label_name: "Navn"
   label_never: "Aldrig"
   label_new: "Ny"
   label_new_features: "New features"
@@ -1538,6 +1541,9 @@ da:
   label_permissions: "Tilladelser"
   label_permissions_report: "Oversigt over tilladelser"
   label_personalize_page: "Tilpas denne side"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Planlæg"
   label_please_login: "Log venligst ind"
   label_plugins: "Tilføjelsesprogrammer"
@@ -2227,7 +2233,6 @@ da:
   setting_welcome_text: "Velkomstblok-tekst"
   setting_welcome_title: "Velkomstblok-titel"
   setting_welcome_on_homescreen: "Vis velkomstblok på hjemmeskærm"
-  setting_work_package_group_assignment: "Tillad tilknytning til grupper"
   setting_work_package_list_default_highlighting_mode: "Default highlighting mode"
   setting_work_package_list_default_highlighted_attributes: "Default inline highlighted attributes"
   settings:

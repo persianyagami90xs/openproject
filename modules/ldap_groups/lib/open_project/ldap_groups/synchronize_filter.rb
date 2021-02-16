@@ -52,7 +52,6 @@ module OpenProject::LdapGroups
             filter: filter.parsed_filter_string,
             attributes: ['dn', group_name]
           ).each do |entry|
-
           yield entry.dn, LdapAuthSource.get_attr(entry, group_name)
         end
       end
@@ -77,9 +76,8 @@ module OpenProject::LdapGroups
         Group.where(id: sync.group_id).update_all(lastname: name)
       else
         # Create an OpenProject group
-        sync.group = Group.find_or_initialize_by(groupname: name)
+        sync.group = Group.find_or_create_by!(groupname: name)
       end
     end
-
   end
 end

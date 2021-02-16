@@ -540,6 +540,7 @@ ar:
         invalid_url: 'is not a valid URL.'
         invalid_url_scheme: 'is not a supported protocol (allowed: %{allowed_schemes}).'
         less_than_or_equal_to: "يجب أن يكون أقل من أو يساوي %{count}."
+        not_deletable: "cannot be deleted."
         not_current_user: "is not the current user."
         not_a_date: "is not a valid date."
         not_a_datetime: "is not a valid date time."
@@ -732,6 +733,7 @@ ar:
       status: "حالة مجموعة العمل"
       member: "عضو"
       news: "الأخبار"
+      placeholder_user: "Placeholder user"
       project: "مشروع"
       query: "استعلام مخصص"
       role:
@@ -1553,6 +1555,7 @@ ar:
   label_my_account_data: "بيانات حسابي"
   label_my_projects: "مشاريعي"
   label_my_queries: "استعلاماتي المخصصة"
+  label_name: "الاسم"
   label_never: "أبداً"
   label_new: "جديد"
   label_new_features: "New features"
@@ -1602,6 +1605,9 @@ ar:
   label_permissions: "السماحيات"
   label_permissions_report: "تقرير السماحيات"
   label_personalize_page: "تخصيص هذه الصفحة"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "تخطيط"
   label_please_login: "الرجاء تسجيل الدخول"
   label_plugins: "الإضافات"
@@ -2311,7 +2317,6 @@ ar:
   setting_welcome_text: "نص كتلة الترجيب"
   setting_welcome_title: "عنوان كتلة الترحيب"
   setting_welcome_on_homescreen: "كتلة الترحيب عرض على الشاشة الرئيسية"
-  setting_work_package_group_assignment: "السماح بالإحالة إلى مجموعات"
   setting_work_package_list_default_highlighting_mode: "Default highlighting mode"
   setting_work_package_list_default_highlighted_attributes: "Default inline highlighted attributes"
   settings:

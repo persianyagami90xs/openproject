@@ -1,5 +1,8 @@
 module Members
   class RowCell < ::RowCell
+    include AvatarHelper
+    include UsersHelper
+
     property :principal
 
     def member
@@ -11,17 +14,13 @@ module Members
     end
 
     def row_css_class
-      group = user? ? "" : "group"
-
-      "member #{group}".strip
+      "member #{principal_class_name}".strip
     end
 
-    def lastname
-      link_to principal.lastname, user_path(principal) if user?
-    end
+    def name
+      icon = avatar principal, class: 'avatar-mini'
 
-    def firstname
-      link_to principal.firstname, user_path(principal) if user?
+      icon + principal_link
     end
 
     def mail
@@ -68,13 +67,11 @@ module Members
     def groups
       if user?
         principal.groups.map(&:name).join(", ")
-      else
-        model.principal.name
       end
     end
 
     def status
-      I18n.t("status_#{model.principal.status_name}")
+      translate_user_status(model.principal.status)
     end
 
     def may_update?
@@ -145,6 +142,21 @@ module Members
       else
         super
       end
+    end
+
+    def principal_link
+      case Principal
+      when User
+        link_to principal.name, user_path(principal)
+      when Group
+        link_to principal.name, show_group_path(principal)
+      else
+        content_tag :span, principal.name
+      end
+    end
+
+    def principal_class_name
+      principal.model_name.singular
     end
 
     def user?

@@ -29,8 +29,15 @@
 module OpenProject::Deprecation
   class << self
     def deprecator
-      @@deprecator||= ActiveSupport::Deprecation.new('in a future major upgrade', 'OpenProject')
+      @@deprecator ||= ActiveSupport::Deprecation
+          .new('in a future major upgrade', 'OpenProject')
+          .tap do |instance|
+        # Reuse the silenced state of the default deprecator
+        instance.silenced = ActiveSupport::Deprecation.silenced
+      end
     end
+
+    delegate :warn, to: :deprecator
 
     ##
     # Deprecate the given method with a notice regarding future removal
@@ -53,7 +60,14 @@ module OpenProject::Deprecation
     end
 
     def replaced(old_method, new_method, called_from)
-      ActiveSupport::Deprecation.warn "#{old_method} is deprecated and will be removed in a future OpenProject version. Please use #{new_method} instead.", called_from
+      message = <<~MSG
+        #{old_method} is deprecated and will be removed in a future OpenProject version.
+
+        Please use #{new_method} instead.
+
+      MSG
+
+      ActiveSupport::Deprecation.warn message, called_from
     end
   end
 end

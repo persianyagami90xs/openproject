@@ -534,6 +534,7 @@ pl:
         invalid_url: 'nie jest poprawnym adresem URL.'
         invalid_url_scheme: 'nie jest obsługiwanym protokołem (dozwolone: %{allowed_schemes}).'
         less_than_or_equal_to: "musi być mniejsze niż lub równe %{count}."
+        not_deletable: "cannot be deleted."
         not_current_user: "nie jest bieżącym użytkownikiem."
         not_a_date: "nie jest poprawną datą."
         not_a_datetime: "nie jest poprawną datą i czasem."
@@ -722,6 +723,7 @@ pl:
       status: "Status pakietu roboczego"
       member: "Członek"
       news: "Aktualności"
+      placeholder_user: "Placeholder user"
       project: "Projekt"
       query: "Kwerenda użytkownika"
       role:
@@ -1517,6 +1519,7 @@ pl:
   label_my_account_data: "Moje dane konta"
   label_my_projects: "Moje projekty"
   label_my_queries: "Moje zapytania niestandardowe"
+  label_name: "Nazwa"
   label_never: "Nigdy"
   label_new: "Nowy"
   label_new_features: "Nowe funkcje"
@@ -1566,6 +1569,9 @@ pl:
   label_permissions: "Uprawnienia"
   label_permissions_report: "Raport uprawnień"
   label_personalize_page: "Personalizacja tej strony"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Planowanie"
   label_please_login: "Proszę się zalogować"
   label_plugins: "Wtyczki"
@@ -2264,7 +2270,6 @@ pl:
   setting_welcome_text: "Tekst bloku powitalnego"
   setting_welcome_title: "Tytuł bloku powitalnego"
   setting_welcome_on_homescreen: "Wyświetl wiadomość powitalną na ekranie głównym"
-  setting_work_package_group_assignment: "Allow assignment to groups"
   setting_work_package_list_default_highlighting_mode: "Domyślny tryb wyróżniania"
   setting_work_package_list_default_highlighted_attributes: "Domyślnie wyróżniane atrybuty wyświetlane w treści"
   settings:

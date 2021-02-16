@@ -535,6 +535,7 @@ sv:
         invalid_url: 'är inte ett giltigt URL.'
         invalid_url_scheme: 'är inte ett tillåtet protokoll (tillåtna: %{allowed_schemes}).'
         less_than_or_equal_to: "måste vara mindre än eller lika med %{count}."
+        not_deletable: "cannot be deleted."
         not_current_user: "is not the current user."
         not_a_date: "är inte är ett giltigt datum."
         not_a_datetime: "är inte en giltig datumtid."
@@ -719,6 +720,7 @@ sv:
       status: "Arbetspaketstatus"
       member: "Medlem"
       news: "Nyheter"
+      placeholder_user: "Placeholder user"
       project: "Projekt"
       query: "Anpassad fråga"
       role:
@@ -1488,6 +1490,7 @@ sv:
   label_my_account_data: "Min kontoinformation"
   label_my_projects: "Mina projekt"
   label_my_queries: "Min anpassade frågor"
+  label_name: "Namn"
   label_never: "Aldrig"
   label_new: "Ny"
   label_new_features: "Nya funktioner"
@@ -1537,6 +1540,9 @@ sv:
   label_permissions: "Behörigheter"
   label_permissions_report: "Rapport över behörigheter"
   label_personalize_page: "Anpassa den här sidan"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Planering"
   label_please_login: "Vänligen logga in"
   label_plugins: "Insticksprogram"
@@ -2226,7 +2232,6 @@ sv:
   setting_welcome_text: "Textblock för välkomstmeddelande"
   setting_welcome_title: "Textblock för välkomsttitel"
   setting_welcome_on_homescreen: "Visa välkomstblocket på hemsidan"
-  setting_work_package_group_assignment: "Tillåt tilldelning till grupper"
   setting_work_package_list_default_highlighting_mode: "Standardläge för markering"
   setting_work_package_list_default_highlighted_attributes: "Standardattribut för inline-markering"
   settings:

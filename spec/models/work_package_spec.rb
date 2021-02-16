@@ -130,7 +130,7 @@ describe WorkPackage, type: :model do
 
         subject do
           FactoryBot.create(:work_package,
-                             assigned_to: group).assigned_to
+                            assigned_to: group).assigned_to
         end
 
         it { is_expected.to eq(group) }
@@ -142,8 +142,8 @@ describe WorkPackage, type: :model do
     let(:user_2) { FactoryBot.create(:user, member_in_project: project) }
     let(:category) do
       FactoryBot.create(:category,
-                         project: project,
-                         assigned_to: user_2)
+                        project: project,
+                        assigned_to: user_2)
     end
 
     before do
@@ -154,34 +154,6 @@ describe WorkPackage, type: :model do
     subject { work_package.assigned_to }
 
     it { is_expected.to eq(category.assigned_to) }
-  end
-
-  describe '#assignable_assignees' do
-    let(:value) { double('value') }
-
-    before do
-      allow(stub_work_package.project).to receive(:possible_assignees).and_return(value)
-    end
-
-    subject { stub_work_package.assignable_assignees }
-
-    it 'calls project#possible_assignees and returns the value' do
-      is_expected.to eql(value)
-    end
-  end
-
-  describe '#assignable_responsibles' do
-    let(:value) { double('value') }
-
-    before do
-      allow(stub_work_package.project).to receive(:possible_responsibles).and_return(value)
-    end
-
-    subject { stub_work_package.assignable_responsibles }
-
-    it 'calls project#possible_responsibles and returns the value' do
-      is_expected.to eql(value)
-    end
   end
 
   describe 'responsible' do

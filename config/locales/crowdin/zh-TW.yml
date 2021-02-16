@@ -535,6 +535,7 @@ zh-TW:
         invalid_url: '不是有效的 URL。'
         invalid_url_scheme: '不是受支援的協定 (允許的協定: %{allowed_schemes})。'
         less_than_or_equal_to: "必須少於或者等於 %{count}。"
+        not_deletable: "cannot be deleted."
         not_current_user: "is not the current user."
         not_a_date: "不是有效的日期。"
         not_a_datetime: "不是有效的日期時間。"
@@ -717,6 +718,7 @@ zh-TW:
       status: "工作項目狀態"
       member: "成員"
       news: "新知"
+      placeholder_user: "Placeholder user"
       project: "專案"
       query: "自訂查詢"
       role:
@@ -1473,6 +1475,7 @@ zh-TW:
   label_my_account_data: "我的帳號資料"
   label_my_projects: "我的專案"
   label_my_queries: "我的自訂查詢"
+  label_name: "名稱"
   label_never: "永不"
   label_new: "新增"
   label_new_features: "新功能"
@@ -1522,6 +1525,9 @@ zh-TW:
   label_permissions: "權限"
   label_permissions_report: "權限報表"
   label_personalize_page: "個人化本頁"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "計劃中"
   label_please_login: "請登入"
   label_plugins: "擴充套件"
@@ -2207,7 +2213,6 @@ zh-TW:
   setting_welcome_text: "歡迎區塊文字"
   setting_welcome_title: "歡迎區塊標題"
   setting_welcome_on_homescreen: "在主頁面上顯示歡迎區塊"
-  setting_work_package_group_assignment: "允許分配給群組"
   setting_work_package_list_default_highlighting_mode: "預設突出顯示模式"
   setting_work_package_list_default_highlighted_attributes: "預設內聯突出顯示的屬性"
   settings:

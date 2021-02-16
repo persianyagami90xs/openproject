@@ -533,6 +533,7 @@ es:
         invalid_url: 'no es una URL válida.'
         invalid_url_scheme: 'no es un protocolo admitido (permitidos: %{allowed_schemes}).'
         less_than_or_equal_to: "debe ser menor o igual a %{count}."
+        not_deletable: "cannot be deleted."
         not_current_user: "no es el usuario actual."
         not_a_date: "no es una fecha válida."
         not_a_datetime: "no es una fecha/hora válida."
@@ -717,6 +718,7 @@ es:
       status: "Estado del paquete de trabajo"
       member: "Miembro"
       news: "Noticias"
+      placeholder_user: "Placeholder user"
       project: "Proyecto"
       query: "Consulta personalizada"
       role:
@@ -1486,6 +1488,7 @@ es:
   label_my_account_data: "Mis datos de cuenta"
   label_my_projects: "Mis proyectos"
   label_my_queries: "Mis consultas personalizadas"
+  label_name: "Nombre"
   label_never: "Nunca"
   label_new: "Nuevo"
   label_new_features: "Nuevas características"
@@ -1535,6 +1538,9 @@ es:
   label_permissions: "Permisos"
   label_permissions_report: "Informe de permisos"
   label_personalize_page: "Personalizar esta página"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Planificación"
   label_please_login: "Por favor, identifíquese"
   label_plugins: "Extensiones"
@@ -2226,7 +2232,6 @@ es:
   setting_welcome_text: "Bloque de texto de bienvenida"
   setting_welcome_title: "Título del bloque de bienvenida"
   setting_welcome_on_homescreen: "Mostrar bloque de bienvenida en la pagina de inicio"
-  setting_work_package_group_assignment: "Permite la asignación a grupos"
   setting_work_package_list_default_highlighting_mode: "Modo de resaltado predeterminado"
   setting_work_package_list_default_highlighted_attributes: "Atributos resaltados en línea predeterminados"
   settings:

@@ -537,6 +537,7 @@ hr:
         invalid_url: 'nije valjani URL.'
         invalid_url_scheme: 'nije podržani protokol (dozvoljeno: %{allowed_schemes}).'
         less_than_or_equal_to: "mora biti manji od ili jednak %{count}."
+        not_deletable: "cannot be deleted."
         not_current_user: "is not the current user."
         not_a_date: "is not a valid date."
         not_a_datetime: "is not a valid date time."
@@ -723,6 +724,7 @@ hr:
       status: "Status Radnog paketa"
       member: "Član"
       news: "Vijesti"
+      placeholder_user: "Placeholder user"
       project: "Projekt"
       query: "Prilagođeni upit"
       role:
@@ -1505,6 +1507,7 @@ hr:
   label_my_account_data: "Moji korisnički podaci"
   label_my_projects: "Moji projekati"
   label_my_queries: "Moji prilagođeni upiti"
+  label_name: "Naziv"
   label_never: "Nikad"
   label_new: "Novi"
   label_new_features: "New features"
@@ -1554,6 +1557,9 @@ hr:
   label_permissions: "Dozvole"
   label_permissions_report: "Dozvole izvješća"
   label_personalize_page: "Prilagodi ovu stranicu"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Planiranje"
   label_please_login: "Molimo prijavite se"
   label_plugins: "Proširenja"
@@ -2250,7 +2256,6 @@ hr:
   setting_welcome_text: "Tekst dobrodošlice"
   setting_welcome_title: "Naslov dobrodošlice"
   setting_welcome_on_homescreen: "Prikaži tekst dobrodošlice na početnoj stranici"
-  setting_work_package_group_assignment: "Allow assignment to groups"
   setting_work_package_list_default_highlighting_mode: "Default highlighting mode"
   setting_work_package_list_default_highlighted_attributes: "Default inline highlighted attributes"
   settings:

@@ -538,6 +538,7 @@ uk:
         invalid_url: 'не є дійсною URL-адресою.'
         invalid_url_scheme: 'не є підтримуваним протоколом (дозволено: %{allowed_schemes}).'
         less_than_or_equal_to: "має бути меншим або рівним %{count}"
+        not_deletable: "cannot be deleted."
         not_current_user: "is not the current user."
         not_a_date: "не є дійсною датою."
         not_a_datetime: "не є дійсним датою."
@@ -726,6 +727,7 @@ uk:
       status: "Стан робочого пакета"
       member: "Учасник"
       news: "Новини"
+      placeholder_user: "Placeholder user"
       project: "Проект"
       query: "Частковий запит"
       role:
@@ -1521,6 +1523,7 @@ uk:
   label_my_account_data: "Мої дані облікового запису"
   label_my_projects: "Мої проекти"
   label_my_queries: "Мої збережені запити"
+  label_name: "Ім’я"
   label_never: "Ніколи"
   label_new: "Новий"
   label_new_features: "Нові можливості"
@@ -1570,6 +1573,9 @@ uk:
   label_permissions: "Дозволи"
   label_permissions_report: "Звіт про права доступу"
   label_personalize_page: "Персоналізуйте цю сторінку"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Планування"
   label_please_login: "Увійдіть у систему"
   label_plugins: "Плагіни"
@@ -2271,7 +2277,6 @@ uk:
   setting_welcome_text: "Текст блоку привітання"
   setting_welcome_title: "Заголовок вітального блоку"
   setting_welcome_on_homescreen: "Відображати вітальний блок на робочому столі"
-  setting_work_package_group_assignment: "Дозволити віднесення до груп"
   setting_work_package_list_default_highlighting_mode: "Режим виділення за умовчанням"
   setting_work_package_list_default_highlighted_attributes: "Стандартні вбудовані виділені атрибути"
   settings:

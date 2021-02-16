@@ -531,6 +531,7 @@ el:
         invalid_url: 'δεν είναι μια έγκυρη διεύθυνση URL.'
         invalid_url_scheme: 'δεν είναι υποστηριζόμενο πρωτόκολλο (επιτρεπόμενα: %{allowed_schemes}).'
         less_than_or_equal_to: "πρέπει να είναι μικρότερο ή ίσο με %{count}."
+        not_deletable: "cannot be deleted."
         not_current_user: "is not the current user."
         not_a_date: "δεν είναι έγκυρη ημερομηνία."
         not_a_datetime: "δεν είναι έγκυρη ημερομηνία και ώρα."
@@ -715,6 +716,7 @@ el:
       status: "Κατάσταση εργασίας"
       member: "Μέλος"
       news: "Νέα"
+      placeholder_user: "Placeholder user"
       project: "Έργο"
       query: "Προσαρμοσμένη αναζήτηση"
       role:
@@ -1484,6 +1486,7 @@ el:
   label_my_account_data: "Τα δεδομένα του λογαριασμού μου"
   label_my_projects: "Τα έργα μου"
   label_my_queries: "Οι προσαρμοσμένες αναζητήσεις μου"
+  label_name: "Όνομα"
   label_never: "Ποτέ"
   label_new: "Νέο"
   label_new_features: "Νέες λειτουργίες"
@@ -1533,6 +1536,9 @@ el:
   label_permissions: "Δικαιώματα"
   label_permissions_report: "Αναφορά δικαιωμάτων"
   label_personalize_page: "Προσωποποίηση αυτής της σελίδας"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Σχεδιασμός"
   label_please_login: "Παρακαλούμε συνδεθείτε"
   label_plugins: "Πρόσθετα"
@@ -2223,7 +2229,6 @@ el:
   setting_welcome_text: "Μπλοκ κειμένου καλωσορίσματος"
   setting_welcome_title: "Μπλοκ τίτλου καλωσορίσματος"
   setting_welcome_on_homescreen: "Εμφάνιση μπλοκ καλωσορίσματος στην αρχική σελίδα"
-  setting_work_package_group_assignment: "Επιτρέψτε την ανάθεση σε ομάδες"
   setting_work_package_list_default_highlighting_mode: "Προεπιλεγμένη λειτουργία επισήμανσης"
   setting_work_package_list_default_highlighted_attributes: "Προεπιλεγμένα inline χαρακτηριστικά με επισήμανση"
   settings:

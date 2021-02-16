@@ -534,6 +534,7 @@ id:
         invalid_url: 'bukanlah URL yang Valid.'
         invalid_url_scheme: 'bukanlah sebuah protokol yang didukung (diperbolehkan: %{allowed_schemes}).'
         less_than_or_equal_to: "harus kurang dari atau sama dengan %{count}."
+        not_deletable: "cannot be deleted."
         not_current_user: "is not the current user."
         not_a_date: "bukan tanggal yang valid."
         not_a_datetime: "bukan tanggal waktu yang valid."
@@ -716,6 +717,7 @@ id:
       status: "Status Work Package"
       member: "Member"
       news: "News"
+      placeholder_user: "Placeholder user"
       project: "Project"
       query: "Query kustom"
       role:
@@ -1472,6 +1474,7 @@ id:
   label_my_account_data: "Data akun saya"
   label_my_projects: "Project saya"
   label_my_queries: "Query kustom saya"
+  label_name: "Nama"
   label_never: "Never"
   label_new: "Baru"
   label_new_features: "New features"
@@ -1521,6 +1524,9 @@ id:
   label_permissions: "Hak akses"
   label_permissions_report: "Laporan"
   label_personalize_page: "Personalisasi halaman"
+  label_placeholder_user: "Placeholder user"
+  label_placeholder_user_new: "New placeholder user"
+  label_placeholder_user_plural: "Placeholder users"
   label_planning: "Perencanaan"
   label_please_login: "Silakan login"
   label_plugins: "Plugin"
@@ -2205,7 +2211,6 @@ id:
   setting_welcome_text: "Welcome block text"
   setting_welcome_title: "Welcome block title"
   setting_welcome_on_homescreen: "Display welcome block on homescreen"
-  setting_work_package_group_assignment: "Mungkinkan penugasan ke Grup"
   setting_work_package_list_default_highlighting_mode: "Default highlighting mode"
   setting_work_package_list_default_highlighted_attributes: "Default inline highlighted attributes"
   settings:

@@ -1,4 +1,5 @@
 #-- encoding: UTF-8
+
 #-- copyright
 # OpenProject is an open source project management software.
 # Copyright (C) 2012-2021 the OpenProject GmbH
@@ -34,7 +35,10 @@ require 'active_support'
 require 'active_support/dependencies'
 require 'core_extensions'
 
-ActiveSupport::Deprecation.silenced = Rails.env.production? && !ENV['OPENPROJECT_SHOW_DEPRECATIONS']
+# Silence deprecations early on for testing on CI and production
+ActiveSupport::Deprecation.silenced =
+  (Rails.env.production? && !ENV['OPENPROJECT_SHOW_DEPRECATIONS']) ||
+  (Rails.env.test? && ENV['CI'])
 
 if defined?(Bundler)
   # lib directory has to be added to the load path so that
