@@ -31,9 +31,25 @@ en:
     github_integration:
       work_packages:
         tab_name: "GitHub"
-      create_pr:
-        button_label: Create Pull Request
-        button_description: Create new Pull Request on GitHub
+      tab_header:
+        title: "Pull Requests"
+        copy_menu:
+          label: Git
+          description: Copy important git content to clipboard
+        create_pr:
+          label: Create Pull Request
+          description: Create new Pull Request on GitHub
+        git_actions:
+          branch: Branch
+          branch_help: Copy the default branch name.
+          message: Message
+          message_help: Copy the default commit message.
+          cmd: Command
+          cmd_help: Copy a shell command which creates a new branch and an empty commit using the default branch name and commit message.
+          title: Copy to Clipboard
+          copy_button_help: Copy to clipboard
+      tab_prs:
+        empty: There are no Pull Requests linked yet. Link an existing PR by using the code <code>OP#%{wp_id}</code> in the PR description or create a new PR.
       pull_request_opened_comment: >
         **PR Opened:** Pull request %{pr_number} [%{pr_title}](%{pr_url}) for [%{repository}](%{repository_url})
         has been opened by [%{github_user}](%{github_user_url}).

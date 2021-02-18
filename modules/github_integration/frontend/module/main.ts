@@ -25,13 +25,17 @@
 // See docs/COPYRIGHT.rdoc for more details.
 
 import {Injector, NgModule} from '@angular/core';
+
 import { HookService } from '../../hook-service';
 import {Tab} from "../../../../components/wp-single-view-tabs/tab/tab";
 import {WorkPackageResource} from "../../../hal/resources/work-package-resource";
+import {OpenprojectCommonModule} from "core-app/modules/common/openproject-common.module";
 
 import {GitHubTabComponent} from './github-tab/github-tab.component';
 import {TabHeaderComponent} from './tab-header/tab-header.component';
 import {TabPrsComponent} from './tab-prs/tab-prs.component';
+import { GitActionsMenuDirective } from './git-actions-menu/git-actions-menu.directive';
+import { GitActionsMenuComponent } from './git-actions-menu/git-actions-menu.component';
 
 function displayable(work_package: WorkPackageResource): boolean {
   return(!!work_package.github);
@@ -51,12 +55,24 @@ export function initializeGithubIntegrationPlugin(injector:Injector) {
 
 
 @NgModule({
+  imports: [
+    OpenprojectCommonModule
+  ],
   providers: [
   ],
   declarations: [
     GitHubTabComponent,
     TabHeaderComponent,
-    TabPrsComponent
+    TabPrsComponent,
+    GitActionsMenuDirective,
+    GitActionsMenuComponent,
+  ],
+  exports: [
+    GitHubTabComponent,
+    TabHeaderComponent,
+    TabPrsComponent,
+    GitActionsMenuDirective,
+    GitActionsMenuComponent,
   ]
 })
 export class PluginModule {

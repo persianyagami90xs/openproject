@@ -3,5 +3,5 @@
 </pr-entry>
 
 <ng-container *ngIf="pullRequests.length === 0">
-  There are no Pull Requests linked yet. Link an existing PR by using the code <code>OP#1234</code> in the PR description or create a new PR.
+  <p [innerHTML]="getEmptyText()"></p>
 </ng-container>

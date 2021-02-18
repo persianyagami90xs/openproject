@@ -26,36 +26,40 @@
 // See docs/COPYRIGHT.rdoc for more details.
 //++
 
-import {Component, Input, OnInit} from "@angular/core";
-import {WorkPackageResource} from "core-app/modules/hal/resources/work-package-resource";
-import {PathHelperService} from "core-app/modules/common/path-helper/path-helper.service";
-import {I18nService} from "core-app/modules/common/i18n/i18n.service";
+import {Injectable} from "@angular/core";
+import { WorkPackageResource } from "core-app/modules/hal/resources/work-package-resource";
+import formatter from 'tickety-tick-formatter';
 
+// todo: probably not providable in root when we want to cache the formatter and set custom templates
 
-@Component({
-  selector: 'tab-header',
-  templateUrl: './tab-header.template.html',
-  styleUrls: [
-    './styles/tab-header.sass'
-  ]
+@Injectable({
+  providedIn: 'root',
 })
-export class TabHeaderComponent implements OnInit {
-  @Input() public workPackage:WorkPackageResource;
-
-  public text = {
-    title: this.I18n.t('js.github_integration.tab_header.title'),
-    createPrButtonLabel: this.I18n.t('js.github_integration.tab_header.create_pr.label'),
-    createPrButtonDescription: this.I18n.t('js.github_integration.tab_header.create_pr.description'),
-    gitMenuLabel: this.I18n.t('js.github_integration.tab_header.copy_menu.label'),
-    gitMenuDescription: this.I18n.t('js.github_integration.tab_header.copy_menu.description'),
-  };
-
-  constructor(readonly PathHelper:PathHelperService,
-              readonly I18n:I18nService) {
+export class GitActionsService {
+  public branchName(workPackage:WorkPackageResource):string {
+    const { branch } = formatter();
+    return(branch(this.formattingInput(workPackage)));
   }
 
-  ngOnInit() {
-    // TODO init texts?!
+  public commitMessage(workPackage:WorkPackageResource):string {
+    const { commit } = formatter();
+    return(commit(this.formattingInput(workPackage)));
+  }
+
+  public gitCommand(workPackage:WorkPackageResource):string {
+    const { command } = formatter();
+    return(command(this.formattingInput(workPackage)));
+  }
+
+  private formattingInput(workPackage: WorkPackageResource) {
+    const type = workPackage.type.name;
+    const id = workPackage.id || '';
+    const title = workPackage.subject;
+    const url = window.location.origin + workPackage.pathHelper.workPackagePath(id);
+    const description = workPackage.description.raw || '';
+
+    return({
+      id, type, title, url, description
+    });
   }
 }
-

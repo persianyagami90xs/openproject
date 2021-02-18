@@ -37,10 +37,15 @@ import {I18nService} from "core-app/modules/common/i18n/i18n.service";
   templateUrl: './tab-prs.template.html'
 })
 export class TabPrsComponent implements OnInit {
+  @Input() public workPackage:WorkPackageResource;
   @Input() public pullRequests:WorkPackageResource[];
 
   constructor(readonly PathHelper:PathHelperService,
               readonly I18n:I18nService) {
+  }
+
+  public getEmptyText() {
+    return this.I18n.t('js.github_integration.tab_prs.empty',{ wp_id: this.workPackage.id });
   }
 
   ngOnInit() {
