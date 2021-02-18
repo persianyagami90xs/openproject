@@ -17,6 +17,7 @@
         (click)="onCopyButtonClick()">
       <op-icon icon-classes="button--icon icon-copy"></op-icon>
     </button>
+    <div class="copy-result-message" *ngIf="showCopyResult" [textContent]="lastCopyResult"></div>
   </div>
   <p class="help-text" [textContent]="selectedTab().help">
   </p>

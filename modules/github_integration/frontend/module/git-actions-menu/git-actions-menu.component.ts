@@ -29,7 +29,6 @@
 import copy from 'copy-text-to-clipboard';
 import {Component, Inject, Input} from "@angular/core";
 import {WorkPackageResource} from "core-app/modules/hal/resources/work-package-resource";
-import {PathHelperService} from "core-app/modules/common/path-helper/path-helper.service";
 import {I18nService} from "core-app/modules/common/i18n/i18n.service";
 import { GitActionsService} from "../git-actions/git-actions.service";
 import { OPContextMenuComponent } from "core-app/components/op-context-menu/op-context-menu.component";
@@ -56,7 +55,14 @@ export class GitActionsMenuComponent extends OPContextMenuComponent {
   public text = {
     title: this.I18n.t('js.github_integration.tab_header.git_actions.title'),
     copyButtonHelpText: this.I18n.t('js.github_integration.tab_header.git_actions.copy_button_help'),
+    copyResult: {
+      success: this.I18n.t('js.github_integration.tab_header.git_actions.copy_success'),
+      error: this.I18n.t('js.github_integration.tab_header.git_actions.copy_error')
+    }
   };
+
+  public lastCopyResult:string = this.text.copyResult.success;
+  public showCopyResult:boolean = false;
 
   public tabs:Tab[] = [
     {
@@ -84,7 +90,6 @@ export class GitActionsMenuComponent extends OPContextMenuComponent {
 
   constructor(@Inject(OpContextMenuLocalsToken)
               public locals:OpContextMenuLocalsMap,
-              readonly PathHelper:PathHelperService,
               readonly I18n:I18nService,
               readonly gitActions:GitActionsService) {
     super(locals);
@@ -102,6 +107,14 @@ export class GitActionsMenuComponent extends OPContextMenuComponent {
   }
 
   public onCopyButtonClick() {
-    copy(this.selectedTab().textToCopy())
+    const success = copy(this.selectedTab().textToCopy())
+
+    if (success) {
+      this.lastCopyResult = this.text.copyResult.success;
+    } else {
+      this.lastCopyResult = this.text.copyResult.error;
+    }
+    this.showCopyResult = true;
+    window.setTimeout(() => { this.showCopyResult = false;}, 2000);
   }
 }
