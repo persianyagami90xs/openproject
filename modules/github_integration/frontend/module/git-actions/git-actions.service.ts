@@ -30,7 +30,7 @@ import {Injectable} from "@angular/core";
 import { WorkPackageResource } from "core-app/modules/hal/resources/work-package-resource";
 import formatter from 'tickety-tick-formatter';
 
-// todo: probably not providable in root when we want to cache the formatter and set custom templates
+// todo: probably not providable in root when we want to cache the formatter and set custom templates in the future
 
 @Injectable({
   providedIn: 'root',

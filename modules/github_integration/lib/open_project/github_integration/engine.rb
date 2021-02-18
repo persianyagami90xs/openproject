@@ -36,16 +36,6 @@ module OpenProject::GithubIntegration
   class Engine < ::Rails::Engine
     engine_name :openproject_github_integration
 
-    # TODO, see: modules/backlogs/lib/open_project/backlogs/engine.rb
-    # def self.settings
-    #   { default: { 'story_types'  => nil,
-    #                'task_type'    => nil,
-    #                'card_spec'    => nil
-    #   },
-    #     partial: 'shared/settings',
-    #     menu_item: :backlogs_settings }
-    # end
-
     include OpenProject::Plugins::ActsAsOpEngine
 
     register 'openproject-github_integration',
