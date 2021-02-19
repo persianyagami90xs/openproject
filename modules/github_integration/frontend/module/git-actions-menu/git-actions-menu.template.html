@@ -13,6 +13,7 @@
   <div class="copy-wrapper">
     <textarea class="copy-content" [textContent]="selectedTab().textToCopy()" [style.height.em]="selectedTab().lines" readonly="true"></textarea>
     <button class="button copy-button"
+        type="button"
         [attr.aria-label]="text.copyButtonHelpText"
         (click)="onCopyButtonClick()">
       <op-icon icon-classes="button--icon icon-copy"></op-icon>
