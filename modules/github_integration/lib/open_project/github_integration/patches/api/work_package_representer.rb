@@ -1,6 +1,6 @@
-module OpenProject::GithubIntegration::Patches
-  module Api
-    module V3
+module OpenProject::GithubIntegration
+  module Patches
+    module API
       module WorkPackageRepresenter
         module_function
 

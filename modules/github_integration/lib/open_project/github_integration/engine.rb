@@ -28,7 +28,7 @@
 
 require 'open_project/plugins'
 
-require_relative './patches/api/v3/work_package_representer'
+require_relative './patches/api/work_package_representer'
 require_relative './notification_handlers'
 require_relative './hook_handler'
 
@@ -65,6 +65,6 @@ module OpenProject::GithubIntegration
     end
 
     extend_api_response(:v3, :work_packages, :work_package,
-                        &::OpenProject::GithubIntegration::Patches::Api::V3::WorkPackageRepresenter.extension)
+                        &::OpenProject::GithubIntegration::Patches::API::WorkPackageRepresenter.extension)
   end
 end
