@@ -2,7 +2,7 @@
   background-color: var(--body-background)
   border: var(--content-default-border-width) solid var(--content-default-border-color)
   padding: 1rem
-  min-width: 20rem
+  min-width: 25rem
   box-shadow: .1em .1em .4em rgba(0,0,0,0.1)
 
   .tabrow
@@ -14,25 +14,30 @@
     margin-bottom: 1rem
 
   .copy-content
-    width: 100%
+    width: calc(100% - 2.2em)
     // the min-height should be the size of the copy-icon, which is the sum of:
     // 2 * button padding (0.65em)
     // font-size of the icon (0.9em)
     // 1px where I don't know where it comes from
     min-height: calc(2 * 0.65em + 0.9em + 1px)
-    border-radius: 2px
+    border-radius: 2px 0 0 2px
     padding: 0.65em
     color: var(--gray-dark)
     white-space: pre
     resize: none
     font-size: 1rem
+    display: inline-block
 
   .copy-button
-    position: absolute
-    top: 0
-    right: 0
     margin: 0
-    border: 1px solid var(--gray-dark)
+    border: 1px solid #ccc
+    border-radius: 0 2px 2px 0
+    vertical-align: top
+    left: -1px
+    position: relative
+
+    &:hover
+      border-color: #999
 
   .copy-result-message
     background-color: var(--main-menu-bg-color)
@@ -59,3 +64,5 @@
   .help-text
     color: var(--gray-dark)
     margin-bottom: 1rem
+    display: inline-block
+    max-width: 20em
