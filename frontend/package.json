@@ -82,7 +82,7 @@
     "bundle-loader": "^0.5.4",
     "caniuse-lite": "^1.0.30001019",
     "cdk-drag-scroll": "^0.0.6",
-    "chart.js": "2.9.3",
+    "chart.js": "2.9.4",
     "chartjs-plugin-datalabels": "^0.6.0",
     "codemirror": "^5.48.4",
     "contra": "^1.9.4",
